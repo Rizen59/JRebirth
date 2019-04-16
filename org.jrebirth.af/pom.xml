@@ -41,7 +41,6 @@
 		<module>dialog</module>
 		<module>fxform</module>
 		<module>undoredo</module>
-		<module>showcase</module>
 		<module>tooling</module>
 		<module>preloader</module>
 		<module>processor</module>
@@ -419,6 +418,22 @@
 				<snapshotRepositoryId>bintray-jrebirth-JRebirth-JRebirthAF</snapshotRepositoryId>
 				<snapshotRepositoryName>jrebirth-JRebirth-JRebirthAF</snapshotRepositoryName>
 				<snapshotRepositoryUrl>https://api.bintray.com/maven/jrebirth/JRebirth/JRebirthAF/</snapshotRepositoryUrl>
+			</properties>
+		</profile>
+		<profile>
+			<id>deploy-dooapp</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<!-- Release repository -->
+				<repositoryId>dooapp-nexus</repositoryId>
+				<repositoryName>dooapp-artifactory-releases</repositoryName>
+				<repositoryUrl>http://nexus.jack.dooapp.com/content/repositories/releases</repositoryUrl>
+				<!-- Snapshot repository -->
+				<snapshotRepositoryId>dooapp-nexus</snapshotRepositoryId>
+				<snapshotRepositoryName>dooapp-artifactory-snapshots</snapshotRepositoryName>
+				<snapshotRepositoryUrl>http://nexus.jack.dooapp.com/content/repositories/snapshots</snapshotRepositoryUrl>
 			</properties>
 		</profile>
 	</profiles>
